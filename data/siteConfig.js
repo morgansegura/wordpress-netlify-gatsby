@@ -1,8 +1,8 @@
 module.exports = {
   siteTitle: "Gatsby + WordPress + Netlifly Starter", // Site title.
   siteTitleAlt: "GatsbyJS WordPress Netlifly API Starter", // Alternative site title for SEO.
-  siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "http://wordpress-154986-534401.cloudwaysapps.com", // Domain of your website without pathPrefix.
+  siteLogo: "", // Logo used for SEO and manifest.
+  siteUrl: "https://catapultarts.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "A GatsbyJS + Netlifly starter with the WordPress API built in mind.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
@@ -11,7 +11,7 @@ module.exports = {
   disqusShortname: "", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   userName: "User", // Username to display in the author segment.
-  userTwitter: "@justinwhall", // Optionally renders "Follow Me" in the UserInfo segment.
+  userTwitter: "codestandard", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "San Diego, CA, USA ", // User location to display in the author segment.
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription:

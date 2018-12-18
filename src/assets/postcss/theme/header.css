@@ -9,9 +9,18 @@
 
     &__inner {
         position: relative;
-        display: flex;        
-        align-items: center;
-        justify-content: center;
+        display: flex;
+        align-items: center;     
+
+        &.start {
+            justify-content: flex-start;            
+        }
+        &.center {
+            justify-content: center;            
+        }
+        &.space-between {
+            justify-content: space-between;            
+        }
     }
 
     .logo {
@@ -22,6 +31,34 @@
         &__text--inner {
             display: flex;
             flex-direction: row; 
+        }
+        &__header {
+            overflow: hidden;
+            height: 40px;
+        }
+        &__image {
+            -webkit-mask: url(../images/logo.svg) no-repeat center;
+            mask: url(../images/logo.svg) no-repeat center;
+            background-size: cover;
+
+            span {
+                opacity: 0;
+                visibility: hidden;
+                position: relative;
+                z-index: -1;
+            }
+        }
+        &--white {
+            background-color: white;
+        }
+        &--black {
+            background-color: black;
+        }
+        &--gray {
+            background-color: google-color(grey, 400);
+        }
+        &--cta {
+            background-color: color($facebook-blue a(.9));
         }
         & .title {
             font-family: $cursive;

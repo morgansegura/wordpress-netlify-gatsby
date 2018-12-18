@@ -2,18 +2,25 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+import config from '../../data/SiteConfig'
 import Layout from '../components/Layout'
+import UserInfo from '../components/Accessories/UserInfo/UserInfo'
+import Disqus from '../components/Accessories/Disqus/Disqus'
+import SocialLinks from '../components/Accessories/SocialLinks/SocialLinks'
+import SEO from '../components/Accessories/SEO/SEO'
 
 export const BlogPostTemplate = ({
   content,
   categories,
   tags,
   title,
+  slug,
   date,
   author,
+  postNode
 }) => {
   return (
-    <section className="section">
+    <section className="section">      
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -55,6 +62,13 @@ export const BlogPostTemplate = ({
             </div>
           </div>
         </div>
+
+        <div className="post-meta">
+          <SocialLinks postPath={slug} postNode={postNode} />
+        </div>
+        <UserInfo config={config} />
+        <Disqus postNode={postNode} />
+
       </div>
     </section>
   )
@@ -66,18 +80,32 @@ BlogPostTemplate.propTypes = {
 }
 
 const BlogPost = ({ data }) => {
+  // const { slug } = config.pathContext
+  const postNode = data.wordpressPost
+
   const { wordpressPost: post } = data
 
+  if (!postNode.id) {
+    postNode.id = slug
+  }
+  if (!postNode.category_id) {
+    postNode.category_id = config.postDefaultCategoryID
+  }
+
+  console.log(config)
   return (
     <Layout>
       <Helmet title={`${post.title} | Blog`} />
+      {<SEO postPath={post.slug} postNode={postNode} postSEO />}       
       <BlogPostTemplate
         content={post.content}
         categories={post.categories}
         tags={post.tags}
         title={post.title}
         date={post.date}
+        slug={post.slug}
         author={post.author}
+        postNode={data.wordpressPost}
       />
     </Layout>
   )
