@@ -15,11 +15,9 @@ export default class TemplateWrapper extends Component{
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
     const pathPrefix = config.pathPrefix ? config.pathPrefix : "/";
-    // const currentPath = this.props.location.pathname
-    const currentPath = window.location.pathname
-
-      .replace(pathPrefix, "")
-      .replace("/", "");
+    const currentPath = location.pathname
+                        .replace(pathPrefix, "")
+                        .replace("/", "");
     let title = "";
     if (currentPath === "") {
       title = "Home";

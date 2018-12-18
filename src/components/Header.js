@@ -8,7 +8,7 @@ class Header extends Component {
     render() {
 
         const menuStyle = 'drawer'
-        console.log(this.props)
+
         return (
             <header className="header">
                 <div className="container">
