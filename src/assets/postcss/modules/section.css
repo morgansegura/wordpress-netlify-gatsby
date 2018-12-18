@@ -1,0 +1,13 @@
+.section {
+    padding-top: $pad-sm;
+    padding-bottom: $pad-md;
+
+    @mixin atSmall {
+        padding-top: $pad-md;
+        padding-bottom: $pad-md;        
+    }
+    @mixin atMedium {
+        padding-top: $pad-lg;
+        padding-bottom: $pad-lg;        
+    }
+}

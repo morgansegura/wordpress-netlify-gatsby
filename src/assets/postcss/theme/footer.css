@@ -1,0 +1,105 @@
+.footer { 
+    padding-top: .5rem; 
+    padding-bottom: .5rem;     
+ 
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @media atMedium {
+            flex-direction: row;
+        }
+    }
+    &__item {
+        padding: 5px 10px;
+    }
+    &__navigation {
+
+        .nav__item {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        a {
+            font-size: 14px;
+            position: relative;
+            color: google-color(grey, 500);
+
+            &::after {
+                content: "";
+                bottom: 2px;
+                left: 50%;
+                position: absolute;
+                width: 80%;
+                height: 1px;
+                transform: translateX(-50%);
+                background-color: transparent;
+                transition: all .3s ease-out;
+            }
+            &:hover {
+                color: white;
+                &::after {
+                    background-color: google-color(grey, 600);                    
+                }
+            }
+            &:active {}
+        }           
+    }
+    .social-media__block--nav {
+        align-items: 
+    } 
+     
+    .copyright {
+        font-size: 14px;
+        color: google-color(grey, 400);
+
+        .year {
+            font-weight: 400;
+        }
+        .company {
+            padding-left: 5px;
+            font-weight: 600
+        }
+    }
+
+    .left, .right, .center {
+        display: flex;
+        flex-direction: column;
+    }
+    /* Copyright */
+    .left {
+        align-items: flex-start;
+        order: 3;
+        padding-bottom: 10px;
+
+        @mixin atMedium {
+            order: 1;
+            padding-bottom: 0;
+        }
+    }
+    /* Nav */
+    .center {
+        align-items: center;
+        order: 2;
+        padding-bottom: 10px;
+
+        @mixin atMedium {
+            padding-bottom: 0;           
+        }        
+    }
+    /* Social */
+    .right {
+        align-items: flex-end;
+        order: 1;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        @mixin atMedium {
+            order: 3;
+            padding-top: 0;
+            padding-bottom: 0;
+        }        
+    }
+}

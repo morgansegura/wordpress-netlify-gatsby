@@ -1,0 +1,151 @@
+.social-media {
+
+    &__block {
+        display: flex;
+    }    
+}
+.social-media__block--nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: google-color(grey, 500);       
+        font-size: 20px;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+        padding: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-weight: normal;
+        transition: all .3s ease-out;
+        &:hover {
+            /* color: google-color(grey, 100); */
+        }
+        &:active {
+
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            border: 2px solid google-color(grey, 400);
+            transform: translate(-50%, -50%);
+            transition: all .3s ease-out;
+        }
+
+        &.social-media--yelp {
+            &:hover {
+                color: $yelp-red; 
+                &::after {
+                    border-color: color($yelp-red a(.5));
+                    background-color: color($yelp-red a(.2));
+                }
+            }
+        }
+        &.social-media--instagram {
+            &:hover {
+                color: color(google-color(purple, a400) a(.8));
+                &::after {
+                    border-color: color(google-color(purple, a400) a(.4));
+                    background-color: color(google-color(purple, a400) a(.2));
+                }
+            }
+        }
+        &.social-media--facebook {
+            &:hover {
+                color: $facebook-blue; 
+                &::after {
+                    border-color: color($facebook-blue a(.5));
+                    background-color: color($facebook-blue a(.2));
+                }
+            }
+        }
+    }
+}
+
+.social-media__block--footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 5px;
+        padding: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-weight: normal;
+        transition: all .3s ease-out;
+        &:hover {}
+        &:active {}
+        &::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 3px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all .3s ease-out;
+        }
+
+        &.social-media--yelp {
+            color: google-color(grey, 300);
+            &::after {
+                background-color: google-color(grey, 800);
+            }
+            &:hover {
+                color: white;
+                &::after {
+                    background-color: color($yelp-red a(1));
+                }
+            }
+        }
+        &.social-media--instagram {
+            color: google-color(grey, 300);
+            &::after {
+                background-color: google-color(grey, 800);
+            }            
+            &:hover {
+                color: white;
+                &::after {             
+                    background-color: color(google-color(purple, a400) a(1));
+                }
+            }
+        }
+        &.social-media--facebook {
+            color: google-color(grey, 300);
+            &::after {
+                background-color: google-color(grey, 800);
+            }            
+            &:hover {
+                color: white; 
+                &::after {
+                    background-color: color($facebook-blue a(1));
+                }
+            }
+        }
+    }
+}

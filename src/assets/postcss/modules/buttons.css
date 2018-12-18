@@ -1,0 +1,53 @@
+.btn {
+    position: relative;
+    z-index: 3;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: background-color .2s ease-out;
+    transition: $base-transition;
+    cursor: pointer;
+    display: inline-block;
+    padding: 13px 30px;
+    border: 2px solid transparent;
+
+    &__outline {
+        background-color: transparent;
+        border: 2px solid black;
+
+        &:hover {
+            border: 2px solid color(black tint(10%));
+        }
+        &:visit {
+            border: 2px solid color(black tint(5%));
+        }
+    }    
+
+    /* Sizes */
+    &--tiny {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    &--sm {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    &--md {  
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+    &--lg {
+        font-size: 18px;
+        padding: 20px 40px;
+    }
+    &__round {
+        border-radius: 50px;
+    }
+    &__sm-round {
+       border-radius: 3px;        
+    }
+}
+.btn__block {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}

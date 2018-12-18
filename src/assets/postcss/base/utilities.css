@@ -1,0 +1,31 @@
+
+/* Media Queries */
+@define-mixin atSmallest {
+    @media (min-width: $atSmallest) {
+        @mixin-content;
+    }
+} 
+
+@define-mixin atSmall {
+    @media (min-width: $atSmall) {
+        @mixin-content;
+    }
+} 
+
+@define-mixin atMedium {
+    @media (min-width: $atMedium) {
+        @mixin-content;
+    }
+} 
+
+@define-mixin atLarge{
+    @media (min-width: $atLarge) {
+        @mixin-content;
+    }
+} 
+
+@define-mixin atLargest {
+    @media (min-width: $atLargest) {
+        @mixin-content;
+    }
+}

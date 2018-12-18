@@ -1,0 +1,90 @@
+* {box-sizing: border-box}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: $base-bg-color;    
+    font-family: $base-font-family;
+    color: $base-font-color;
+    font-weight: $base-font-weight;
+    font-size: $base-font-size;
+    line-height: $base-font-height;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;  
+}
+
+/* Body Structure */
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: 100vh;
+    transition: $base-transition;
+}
+
+.main {
+    position: relative;
+    flex: 1;
+}
+
+iframe {border: none;}
+
+ul li {
+    list-style-type: none;
+}
+
+a:hover {
+    text-decoration: none; 
+}
+
+p, h1, h2, h3, h4, h5, h6 { 
+    margin: 0;
+    &::before {
+        margin: 0; 
+    }
+    &::after {
+        margin: 0; 
+    }
+}
+
+/* ensure Font themes don't automatically add 
+icons to links directly. */
+
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    transition: color .3s ease-out;
+
+    &:hover {
+        color: inherit;
+    }
+}
+a[href*='//'], a[href*='//']:hover {
+
+    &::after {
+        content: "";
+    }
+    &.external {
+        content: "url(data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-e…023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E)";
+    }
+}
+
+/*  Remove gutters from bootstrap4 grid, 
+e.g. no gap or spacing */
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col,
+    > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

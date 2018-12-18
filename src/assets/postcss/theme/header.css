@@ -1,0 +1,32 @@
+.header {
+    position: relative;
+    background-color: white;
+    border-bottom: 1px solid $main-white;
+    position: sticky;
+    top: 0;
+    overflow: visible;
+    z-index: 101;
+
+    &__inner {
+        position: relative;
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo {
+        z-index: 2;
+        padding: 0;
+        color: $main-black;
+
+        &__text--inner {
+            display: flex;
+            flex-direction: row; 
+        }
+        & .title {
+            font-family: $cursive;
+            font-weight: 300;
+            font-size: 40px;
+        }
+    }
+}

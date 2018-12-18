@@ -1,0 +1,85 @@
+.t {
+    &-center {
+        text-align: center;
+    }
+    &-justify {
+        text-align: justify;
+    }
+    &-left {
+        text-align: left;
+    }
+    &-right {
+        text-align: right;
+    }
+    &-highlight {
+        &--cta {
+            color: $cta-lighter;
+        }
+    }
+}
+
+.b {
+    @for $b from 3 to 9 {
+        &$(b) {
+        font-weight: $(b)00;   
+        }     
+    }    
+}
+
+.sans {
+    font-family: $sans-primary;
+}
+.serif {
+    font-family: $serif-primary;
+}
+.cursive {
+    font-family: $cursive;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+.lowercase {
+    text-transform: lowercase;
+}
+.capitalize {
+    text-transform: capitalize;
+}
+.linethrough {
+    text-decoration: line-through;
+}
+
+.h1 {
+    font-size: 40px;
+}
+.h2 {
+    font-size: 36px;
+}
+.h3 {
+    font-size: 32px;
+}
+.h4 {
+    font-size: 28px;
+}
+.h5 {
+    font-size: 24px;
+    font-weight: 600;    
+}
+.h6 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.h1, .h2, .h3, 
+.h4, .h5, .h6,
+p {
+    
+}
+
+.fs {
+    @for $b from 10 to 60 {
+        &-$(b) {
+        font-size: $(b)px;
+        }     
+    }    
+}

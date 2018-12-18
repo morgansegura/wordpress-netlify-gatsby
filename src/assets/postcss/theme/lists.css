@@ -1,0 +1,6 @@
+.post-list {
+
+    &__title {
+        font-size: 40px;
+    }
+}

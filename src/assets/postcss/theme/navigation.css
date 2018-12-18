@@ -1,0 +1,112 @@
+.nav {
+    /* position: absolute; */
+    right: 0;
+
+    &__inner { 
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }    
+    &__item {
+        padding: 5px 10px;
+    }   
+    .menu-icon {
+        color: google-color(grey, 700);
+        font-size: 36px;
+        transition: all .3s ease-out;
+
+        &:hover {
+            color: white;
+        }
+    }
+}
+[class^=MuiPaper-root-] {
+    background-color: $main-white !important;
+}  
+.nav__menu {
+
+    .nav__item {
+        display: block;
+        width: 100%;
+        font-weight: 600;
+        color: google-color(grey, 600);
+        text-transform: uppercase;
+        transition: all .3s ease-out;
+
+        &:hover {
+            color: google-color(grey, 900);
+        }
+        &:active {
+            color: google-color(grey, 500);
+        }
+
+    }
+    li {
+        transition: all .3s ease-out;
+
+        &:hover {            
+            background-color: color(white a(.5));
+        }
+        &:active {
+            background-color: color(black a(.1));
+        }   
+    }
+
+    .btn--black {
+        &:hover {
+            color: google-color(grey, 800);
+            border-color: google-color(grey, 500);
+            /* background-color: google-color(grey, 400); */
+        }
+        &:active {
+            color: google-color(grey, 800);
+            border-color: google-color(grey, 500);
+            background-color: google-color(grey, 400);
+        }
+    } 
+}
+
+.nav__trigger {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 10px;
+
+    &--inner, &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: google-color(grey, 800);
+        /* border-radius: 30px;*/
+        left: 0;
+        transform: translate(0, -50%);
+        transition: all .3s ease-out;
+    }
+    &--inner {
+        top: 50%;
+    }    
+    &::before {
+        top: 0;
+    }
+    &::after {
+        top: 100%;
+    }
+
+    &:hover {
+        .nav__trigger--inner, 
+        &::before, 
+        &::after {
+            background-color: google-color(grey, 600);
+        }
+    }    
+}
+
+
+
+
+
+
+
+

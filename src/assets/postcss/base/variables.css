@@ -1,0 +1,47 @@
+/* Fonts */
+$sans-primary: 'Source Sans Pro', sans-serif;
+$sans-secondary: 'Fjalla One', sans-serif;
+$serif-primary: 'Source Serif Pro', serif;
+$cursive: 'Norican', cursive;
+
+/* Shades */
+$main-black: #181a1e;
+$main-white: #ededed;
+$main-gray: #4a4a4a;
+$main-gray-light: #a9a9a9;
+
+/* Social Colors */
+$facebook-blue: #4267b2;
+$instagram-grey: #231F20;
+$yelp-red: #D32323;
+
+/* Theme Colors */
+$cta: google-color(amber, a400);
+$cta-lighter: google-color(amber, a700);
+$cta-darker: google-color(amber, 700);
+$cta-alt: red;
+
+/* Alt Colors */
+
+/* Dimensions */
+$atSmallest: 320px;
+$atSmall: 576px;
+$atMedium: 768px;
+$atLarge: 992px;
+$atLargest: 1200px;
+
+/* Padding, Margin defaults */
+$pad: 15px;
+$pad-sm: 30px;
+$pad-md: 60px;
+$pad-lg: 90px;
+$pad-xl: 120px;
+
+/* Setup Baseline.css elements */
+$base-font-size: 1rem;
+$base-font-family: $sans-primary;
+$base-font-weight: 400;
+$base-font-height: 1.7;
+$base-font-color: $main-gray;
+$base-bg-color: white;
+$base-transition: all .3s ease-out;

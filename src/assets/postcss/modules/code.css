@@ -1,0 +1,26 @@
+code, pre {
+    font-size: 1rem;
+    font-weight: normal;
+    /* font-family: $mono-primary;             */
+}
+:not(pre)>code[class*=language-], pre[class*=language-] {
+    background-color: $main-black;
+}        
+pre, pre[class*=language-] {
+    background-color: $main-black;
+
+    .description {
+
+        display: inline;
+        position: absolute;
+
+        .top-right {
+
+        }
+    }
+}
+
+code[class*=language-], pre[class*=language-] {
+    line-height: .7;
+    font-size: 16px;
+}
