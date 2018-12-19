@@ -1,4 +1,4 @@
-const config = require('./src/data/SiteConfig')
+// const config = require('./src/data/SiteConfig')
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
@@ -81,12 +81,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitle,
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
+        name: "Catapult Arts",
+        short_name: "catapult arts",
+        description: "web design, web development, social media marketing, search engine optimizaion, search engine marketing",
+        start_url: "https://catapultarts.com",
+        background_color: "#efefef",
+        theme_color: "red",
         display: 'minimal-ui',
         icons: [
           {
