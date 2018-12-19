@@ -1,10 +1,10 @@
 const config = {
-  siteTitle: "Gatsby + WordPress + Netlifly Starter", // Site title.
-  siteTitleAlt: "GatsbyJS WordPress Netlifly API Starter", // Alternative site title for SEO.
+  siteTitle: "Catapult Arts", // Site title.
+  siteTitleAlt: "Catapult Arts | Affordable, Professional Web Design and Development", // Alternative site title for SEO.
   siteLogo: "", // Logo used for SEO and manifest.
   siteUrl: "https://catapultarts.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "A GatsbyJS + Netlifly starter with the WordPress API built in mind.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "web design, web development, social media marketing, search engine optimizaion, search engine marketing", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   googleAnalyticsID: "UA-131102503-1", // GA tracking ID.

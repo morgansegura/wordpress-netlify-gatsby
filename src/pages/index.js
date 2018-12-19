@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
 import Layout from '../components/Layout'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import config from '../data/siteConfig'
 
 class Pages extends Component {
   render() {
@@ -9,15 +11,26 @@ class Pages extends Component {
     return (
       <Layout>
         <section className="container section">
-          <h1>Pages</h1>
+          <h1>Welcome to the Home page of {config.siteTitle}</h1>
           {data.allWordpressPage.edges.map(({ node }) => (
-            !!node.slug && node.slu === 'home' ? 
+            !!node.slug && node.slug === 'home' ? 
               <div key={node.slug}>
-                <Link to={node.slug} css={{ textDecoration: `none` }}>
+
+                <Link to={node.slug}>
                   <h3>{node.title}</h3>
                 </Link>
+
                 <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+
+                <div dangerouslySetInnerHTML={{ __html: node.content }} />
+
                 <p><span className="mdi mdi-clock"> </span>{node.date}</p>
+
+                {!!node.acf.hero && node.acf.hero.length ? 
+                  node.acf.hero.map(({ image }) => (
+                  <PreviewCompatibleImage imageInfo={image.localFile} />
+                  )) 
+                : null }
               </div>
             : null
           ))}
@@ -47,7 +60,6 @@ export const pageQuery = graphql`
               image {
                 localFile {
                   childImageSharp {
-                    # Try editing the "width" and "height" values.
                     fluid(maxWidth: 1920) {
                       ...GatsbyImageSharpResolutions_tracedSVG
                     }
