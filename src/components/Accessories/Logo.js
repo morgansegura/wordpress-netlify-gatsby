@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { siteTitle } from '../../../data/SiteConfig'
+import { siteTitle } from '../../data/SiteConfig'
 import siteLogo from '../../assets/images/logo.svg'
 
 class Logo extends Component {

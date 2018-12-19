@@ -1,4 +1,4 @@
-// const config = require('./data/SiteConfig')
+const config = require('./src/data/SiteConfig')
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
@@ -81,12 +81,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "Catapult Arts",
-        short_name: "Catapult Arts",
-        description: "A GatsbyJS + Netlifly starter with the WordPress API built in mind.",
-        start_url: "/",
-        background_color: "#e0e0e0",
-        theme_color: "#c62828",
+        name: config.siteTitle,
+        short_name: config.siteTitle,
+        description: config.siteDescription,
+        start_url: config.pathPrefix,
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
         display: 'minimal-ui',
         icons: [
           {

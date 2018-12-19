@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
-import config from '../../data/SiteConfig'
+import config from '../data/SiteConfig'
 import Header from './Header'
 import Footer from './Footer'
 import ContactModal from './Forms/ContactForm'
