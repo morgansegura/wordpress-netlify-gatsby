@@ -31,7 +31,7 @@ const config = {
     {
       label: "Email",
       url: "justinwhall@me.com",
-      iconClassName: "mdi mdi-envelope"
+      iconClassName: "mdi mdi-envelope" 
     }
   ],
   copyright: "Copyright © 2018. Advanced User", // Copyright string for the footer of the website and RSS feed.

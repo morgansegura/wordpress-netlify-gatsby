@@ -21,7 +21,7 @@ const Navbar = (props) => {
       render={data => (
         <nav className="nav nav__main">
           {!!props.menuStyle && props.menuStyle === `drawer` ?
-            <div></div>
+            <DrawerMenu menuData={data.allWordpressPage.edges} />
             :
             <div className="nav__inner">
               {data.allWordpressPage.edges.map(edge => (

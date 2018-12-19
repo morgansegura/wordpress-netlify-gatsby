@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import siteLogo from '../../assets/images/logo.svg'
 
-import config from '../../data/SiteConfig'
+import config from '../../data/siteConfig'
 
 
 class Logo extends Component {

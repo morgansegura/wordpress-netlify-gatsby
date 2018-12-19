@@ -5,7 +5,7 @@ import Footer from './Footer'
 import ContactModal from './Forms/ContactForm'
 
 
-import config from '../data/SiteConfig'
+import config from '../data/siteConfig'
 import '../assets/css/styles.css'
 
 // const locationPathName = location.pathname

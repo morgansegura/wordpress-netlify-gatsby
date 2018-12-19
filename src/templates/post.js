@@ -8,7 +8,7 @@ import Disqus from '../components/Accessories/Disqus/Disqus'
 import SocialLinks from '../components/Accessories/SocialLinks/SocialLinks'
 import SEO from '../components/Accessories/SEO/SEO'
 
-import config from '../../src/data/SiteConfig'
+import config from '../data/siteConfig'
 
 export const BlogPostTemplate = ({
   content,
