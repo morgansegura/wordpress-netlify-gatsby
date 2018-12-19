@@ -14,12 +14,14 @@ class Pages extends Component {
     const HeroGlide = new Glide('.hero-glide',
       {
         type: 'carousel',
-        rewind: false,
         perView: 1,
         perTouch: 1,
+        keyboard: true,
         hoverPause: true,
+        animationTimingFunc: 'ease-out',
         // autoplay: 12000,
-        animationDuration: 1000
+        animationDuration: 1000,
+
       })
     HeroGlide.mount()
   }
@@ -46,9 +48,12 @@ class Pages extends Component {
                           </div>
                         ))
                         : null}
-
-                      </div>
-                    </div>
+                      </div>                     
+                    </div> 
+                    <div className="glide__arrows" data-glide-el="controls">
+                      <button className="glide__arrow glide__arrow--left" data-glide-dir="<"><span className="mdi mdi-arrow-left-bold-hexagon-outline"></span></button>
+                      <button className="glide__arrow glide__arrow--right" data-glide-dir=">"><span className="mdi mdi-arrow-right-bold-hexagon-outline"></span></button>
+                    </div>                                    
                   </div>
                 </div>
               </div>
@@ -99,8 +104,8 @@ export const pageQuery = graphql`
               image {
                 localFile {
                   childImageSharp {
-                    fluid(maxWidth: 1920) {
-                      ...GatsbyImageSharpFluid_tracedSVG
+                    fluid(maxWidth: 1920, maxHeight: 1270) {
+                      ...GatsbyImageSharpFluid
                     }
                   }                
                 }
