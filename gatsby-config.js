@@ -1,4 +1,4 @@
-// const config = require('./src/data/SiteConfig')
+const config = require('./src/data/SiteConfig')
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
