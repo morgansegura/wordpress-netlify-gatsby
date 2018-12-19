@@ -7,51 +7,18 @@ import ContactModal from './Forms/ContactForm'
 
 import '../assets/css/styles.css'
 
+// const locationPathName = location.pathname
 
-export default class TemplateWrapper extends Component{
-  
-  getLocalTitle() {
-    function capitalize(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-    const pathPrefix = config.pathPrefix ? config.pathPrefix : "/";
-    const currentPath = location.pathname
-                        .replace(pathPrefix, "")
-                        .replace("/", "");
-    let title = "";
-    if (currentPath === "") {
-      title = "Home";
-    } else if (currentPath === "tags/") {
-      title = "Tags";
-    } else if (currentPath === "categories/") {
-      title = "Categories";
-    } else if (currentPath === "about/") {
-      title = "About";
-    } else if (currentPath.indexOf("posts")) {
-      title = "Article";
-    } else if (currentPath.indexOf("tags/")) {
-      const tag = currentPath
-        .replace("tags/", "")
-        .replace("/", "")
-        .replace("-", " ");
-      title = `Tagged in ${capitalize(tag)}`;
-    } else if (currentPath.indexOf("categories/")) {
-      const category = currentPath
-        .replace("categories/", "")
-        .replace("/", "")
-        .replace("-", " ");
-      title = `${capitalize(category)}`;
-    }
-    return title;
-  }
+class TemplateWrapper extends Component {
 
   render() {
+
     const { children } = this.props;
-      console.log(this.props)
+      // console.log(this.props)
       return (  
         <div id="wrapper" className="wrapper is--mobile-nav">
           <Helmet>
-            <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
+            <title>{`${children.title} | ${config.siteTitle}`}</title>
             <meta name="description" content={config.siteDescription} />
           </Helmet>
           <Header config={config} />
@@ -65,3 +32,4 @@ export default class TemplateWrapper extends Component{
     }
 }
 
+export default TemplateWrapper

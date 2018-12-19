@@ -1,5 +1,4 @@
 const config = require('./data/SiteConfig')
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
@@ -8,6 +7,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + WordPress Starter',
+    siteUrl: 'https://catapultarts.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
