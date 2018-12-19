@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 import PostList from '../components/PostList'
 import Pagination from '../components/Pagination'
 
-export default class IndexPage extends React.Component {
+export default class BlogIndexPage extends React.Component {
   render() {
     const { data, pageContext } = this.props
     const { edges: posts } = data.allWordpressPost
@@ -19,7 +19,7 @@ export default class IndexPage extends React.Component {
   }
 }
 
-IndexPage.propTypes = {
+BlogIndexPage.propTypes = {
   data: PropTypes.shape({
     allWordpressPost: PropTypes.shape({
       edges: PropTypes.array,
@@ -32,7 +32,7 @@ IndexPage.propTypes = {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery($limit: Int!, $skip: Int!) {
+  query BlogIndexQuery($limit: Int!, $skip: Int!) {
     allWordpressPost(
       sort: { fields: date, order: DESC }
       limit: $limit

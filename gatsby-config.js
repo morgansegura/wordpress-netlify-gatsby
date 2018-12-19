@@ -75,7 +75,13 @@ module.exports = {
         ]
       }
     },     
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-purgecss',
     'gatsby-plugin-catch-links',

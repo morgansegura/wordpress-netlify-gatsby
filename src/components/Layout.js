@@ -8,8 +8,6 @@ import ContactModal from './Forms/ContactForm'
 import config from '../data/siteConfig'
 import '../assets/css/styles.css'
 
-// const locationPathName = location.pathname
-
 class TemplateWrapper extends Component {
 
   render() {
