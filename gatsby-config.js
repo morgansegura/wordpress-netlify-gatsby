@@ -1,4 +1,3 @@
-// const config = require('./src/data/SiteConfig.js')
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`
@@ -7,7 +6,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + WordPress Starter',
-    siteUrl: 'https://catapultarts.com',
+    siteUrl: 'https://catapultarts.com/app',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -16,7 +15,7 @@ module.exports = {
       resolve: 'gatsby-source-wordpress',
       options: {
         // The base url to your WP site.
-        baseUrl: 'catapultarts.com',
+        baseUrl: 'catapultarts.com/app',
         // WP.com sites set to true, WP.org set to false
         hostingWPCOM: false,
         // The protocol. This can be http or https.
@@ -46,20 +45,24 @@ module.exports = {
           "/*/*/settings",
         ],
         excludedRoutes: [
+          "/*/*/block-renderer",
+          "/wp-json/v2/block-renderer/*",
           // "/*/*/comments",
-          // "/yoast/**",
+          "/yoast/**",
           // "/*/*/users",
-          // "/*/users/me",
+          "/*/*/users/me",
+          "/wp/v2/users/me",
           // "/oembed/*",
-          // "/wp/v2/users/me",
           // "/acf/v2/options",
-          // "/wp-json/v2/settings",
-          // "/wp-json/v2/themes"
+          "/wp-json/v2/settings",
+          "/*/*/settings",
+          "/wp-json/v2/themes",
+          "/*/*/themes"
         ],
         normalizer: function ({ entities }) {
           return entities
         },             
-        verboseOutput: false,                        
+        verboseOutput: true,                        
       },
     },
     {
@@ -84,7 +87,7 @@ module.exports = {
         name: "Catapult Arts",
         short_name: "catapult arts",
         description: "web design, web development, social media marketing, search engine optimizaion, search engine marketing",
-        start_url: "https://catapultarts.com",
+        start_url: "catapultarts.com",
         background_color: "#efefef",
         theme_color: "red",
         display: 'minimal-ui',

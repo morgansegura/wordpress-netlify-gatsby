@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-import config from '../data/SiteConfig'
 import Layout from '../components/Layout'
 import UserInfo from '../components/Accessories/UserInfo/UserInfo'
 import Disqus from '../components/Accessories/Disqus/Disqus'
 import SocialLinks from '../components/Accessories/SocialLinks/SocialLinks'
 import SEO from '../components/Accessories/SEO/SEO'
+
+import config from '../../src/data/SiteConfig'
 
 export const BlogPostTemplate = ({
   content,
@@ -80,7 +81,7 @@ BlogPostTemplate.propTypes = {
 }
 
 const BlogPost = ({ data }) => {
-  // const { slug } = config.pathContext
+  // const { slug } = config.pageContext
   const postNode = data.wordpressPost
 
   const { wordpressPost: post } = data
@@ -92,7 +93,6 @@ const BlogPost = ({ data }) => {
     postNode.category_id = config.postDefaultCategoryID
   }
 
-  console.log(config)
   return (
     <Layout>
       <Helmet title={`${post.title} | Blog`} />

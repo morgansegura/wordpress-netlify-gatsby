@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   siteTitle: "Gatsby + WordPress + Netlifly Starter", // Site title.
   siteTitleAlt: "GatsbyJS WordPress Netlifly API Starter", // Alternative site title for SEO.
   siteLogo: "", // Logo used for SEO and manifest.
@@ -36,5 +36,7 @@ module.exports = {
   ],
   copyright: "Copyright © 2018. Advanced User", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#c62828", // Used for setting manifest and progress theme colors.
-  backgroundColor: "#e0e0e0" // Used for setting manifest background color.
-};  
+  backgroundColor: "#e0e0e0" // Used for setting manifest background color.  
+}
+
+export default config

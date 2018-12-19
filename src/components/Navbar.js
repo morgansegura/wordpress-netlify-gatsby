@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 import DrawerMenu from './ui/DrawerMenu'
 
 const Navbar = (props) => {
-
+  
   return (
     <StaticQuery
       query={graphql`
@@ -21,7 +21,7 @@ const Navbar = (props) => {
       render={data => (
         <nav className="nav nav__main">
           {!!props.menuStyle && props.menuStyle === `drawer` ?
-            <DrawerMenu menuData={data.allWordpressPage.edges} />
+            <div></div>
             :
             <div className="nav__inner">
               {data.allWordpressPage.edges.map(edge => (

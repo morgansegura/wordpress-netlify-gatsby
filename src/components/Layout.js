@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
-import config from '../data/SiteConfig'
 import Header from './Header'
 import Footer from './Footer'
 import ContactModal from './Forms/ContactForm'
 
+
+import config from '../data/SiteConfig'
 import '../assets/css/styles.css'
 
 // const locationPathName = location.pathname
@@ -12,7 +13,6 @@ import '../assets/css/styles.css'
 class TemplateWrapper extends Component {
 
   render() {
-
     const { children } = this.props;
       // console.log(this.props)
       return (  
