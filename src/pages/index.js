@@ -27,8 +27,8 @@ class Pages extends Component {
                 <p><span className="mdi mdi-clock"> </span>{node.date}</p>
 
                 {!!node.acf.hero && node.acf.hero.length ? 
-                  node.acf.hero.map(({ image }) => (
-                  <PreviewCompatibleImage imageInfo={image.localFile} />
+                  node.acf.hero.map(({ image }, i) => (
+                  <PreviewCompatibleImage key={i} imageInfo={image.localFile} />
                   )) 
                 : null }
               </div>
@@ -61,7 +61,7 @@ export const pageQuery = graphql`
                 localFile {
                   childImageSharp {
                     fluid(maxWidth: 1920) {
-                      ...GatsbyImageSharpResolutions_tracedSVG
+                      ...GatsbyImageSharpFluid_tracedSVG
                     }
                   }                
                 }
