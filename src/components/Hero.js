@@ -25,19 +25,26 @@ class Hero extends Component{
         console.log(this.props)
         console.log(!!node)
         return (        
-            <div className="hero hero__main">                               
+            <div className="hero hero__main theme--ol">                
+                {!!node && this.props.heroImage === true ?
                 <div className="hero__inner"> 
-                    {!!node && this.props.heroImage === true ?
                     <div className="hero__image-container">
-                        <PreviewCompatibleImage imageInfo={node.image.localFile} />
-                        <h4 className="hero__cation">{node.caption}</h4>
-                        <a href={node.link.url} title={node.link.title}>
-                            {node.link.title}
-                        </a>                   
+                        <PreviewCompatibleImage className="hello" imageInfo={node.image.localFile} />              
                     </div>
-                    : null }
+                    <div className="hero__meta-container top right">
+                        <h4 className="hero__title">{node.title}</h4>
+                        <p className="hero__caption">{node.title}</p>
+                        <div className="btn__block left">
+                            <a className="hero__link btn btn--sm btn__white btn__round" href={node.link.url} title={node.link.title}>
+                                {node.link.title}
+                            </a>
+                        </div>
+                    </div>     
+                </div>                 
+                : null }
 
-                    {!!node && this.props.heroCarousel === true ?
+                {!!node && this.props.heroCarousel === true ?
+                <div className="hero__inner"> 
                     <div className="hero-glide">
                         <div data-glide-el="track" className="glide__track">
                             <div className="glide__slides">
@@ -53,8 +60,8 @@ class Hero extends Component{
                             <button className="glide__arrow glide__arrow--right" data-glide-dir=">"><span className="mdi mdi-arrow-right-bold-hexagon-outline"></span></button>
                         </div>
                     </div>
-                    : null}                    
-                </div>                
+                </div>
+                : null}            
             </div>            
         );
     }

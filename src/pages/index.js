@@ -77,13 +77,13 @@ export const pageQuery = graphql`
               }                
             }
           }
-          link_boolean
           link {
             title
             url
             target
           }
           alt
+          title
           caption
         }
         hero_billboard_boolean
@@ -103,6 +103,7 @@ export const pageQuery = graphql`
             target
           }
           alt
+          title
           caption
         }
       }    

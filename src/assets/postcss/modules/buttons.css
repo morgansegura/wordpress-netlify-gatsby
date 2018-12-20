@@ -48,6 +48,17 @@
 }
 .btn__block {
     display: flex;
-    width: 100%;
     align-items: center;
+
+    &.left {       
+        justify-content: flex-start;
+        left: 10%;        
+    }
+    &.right {     
+        justify-content: flex-end;  
+        right: 10%;
+    }
+    &.center {
+        justify-content: center;
+    }    
 }

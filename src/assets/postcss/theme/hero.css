@@ -1,3 +1,66 @@
 .hero {
-    
+
+    &__main {
+        
+    }
+    &__inner {
+        position: relative;
+    }
+    &__image-container {
+        position: relative;
+        width: 100%;
+    }
+    &__meta-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;        
+
+        &.top {
+            top: 10%;
+            justify-content: flex-start;
+        }
+        &.bottom {
+            bottom: 10%;
+            justify-content: flex-end;   
+        }
+        &.middle {
+            justify-content: center;         
+        }
+        &.left {       
+            align-items: flex-start;
+            left: 10%;        
+        }
+        &.right {     
+            align-items: flex-end;            
+            right: 10%;
+        }
+        &.center {
+            align-items: center;             
+        }
+    }
+    &__caption {
+        font-size: 50px;
+
+        .theme--ol & { 
+            color: white;
+        }
+        .theme--od & { 
+            color: black;
+        }
+    }
+    &__link-block {
+        
+    }       
+    &__link {
+        font-weight: 800;
+        font-size: 
+        .theme--od & { 
+            background-color: white;
+        }
+        .theme--ol & { 
+            color: black;
+        }
+    }    
 }
