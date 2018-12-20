@@ -33,34 +33,22 @@
             left: 10%;        
         }
         &.right {     
-            align-items: flex-end;            
+            align-items: flex-end;
             right: 10%;
         }
         &.center {
             align-items: center;             
         }
     }
-    &__caption {
+    &__title {
         font-size: 50px;
-
-        .theme--ol & { 
-            color: white;
-        }
-        .theme--od & { 
-            color: black;
-        }
     }
-    &__link-block {
-        
-    }       
+    &__caption {
+        font-size: 22px;
+    }
+   
     &__link {
         font-weight: 800;
-        font-size: 
-        .theme--od & { 
-            background-color: white;
-        }
-        .theme--ol & { 
-            color: black;
-        }
+        font-size: 14px;
     }    
 }

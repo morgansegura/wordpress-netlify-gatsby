@@ -23,22 +23,28 @@ class Hero extends Component{
     render() {
         const node = this.props.node
         console.log(this.props)
-        console.log(!!node)
+        console.log(node.caption.length)
         return (        
-            <div className="hero hero__main theme--ol">                
+            <div className="hero hero__main theme--od">                
                 {!!node && this.props.heroImage === true ?
                 <div className="hero__inner"> 
                     <div className="hero__image-container">
                         <PreviewCompatibleImage className="hello" imageInfo={node.image.localFile} />              
                     </div>
                     <div className="hero__meta-container top right">
+                    {!!node.title && node.title !== '' ?
                         <h4 className="hero__title">{node.title}</h4>
-                        <p className="hero__caption">{node.title}</p>
-                        <div className="btn__block left">
-                            <a className="hero__link btn btn--sm btn__white btn__round" href={node.link.url} title={node.link.title}>
+                    : null }
+                    {!!node.caption && node.caption !== '' ?
+                        <p className="hero__caption">{node.caption}</p>
+                    : null }
+                    {!!node.link && node.link !== '' ?
+                        <div className="list__block left">
+                            <a className="hero__link btn btn--sm btn__round" href={node.link.url} title={node.link.title}>
                                 {node.link.title}
                             </a>
                         </div>
+                    : null }
                     </div>     
                 </div>                 
                 : null }

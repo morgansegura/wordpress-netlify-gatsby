@@ -1,0 +1,12 @@
+.theme--ol {
+    & .hero__title,
+    & .hero__caption {
+        color: black;
+    }
+}
+.theme--od {
+    & .hero__title,
+    & .hero__caption {
+        color: white;
+    }
+}

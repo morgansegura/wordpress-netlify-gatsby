@@ -4,3 +4,52 @@
         font-size: 40px;
     }
 }
+
+.list__block {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+
+    &-column {
+        flex-direction: column;
+    }
+
+    &.top {       
+        align-items: flex-start;    
+    }
+    &.bottom {     
+        align-items: flex-end;  
+    }
+    &.middle {
+        align-items: center;
+    }    
+    &.left {       
+        justify-content: flex-start; 
+    }
+    &.right {     
+        justify-content: flex-end;  
+    }
+    &.center {
+        justify-content: center;
+    }    
+}
+.list__block-column {
+    &.top {       
+        justify-content: flex-start;    
+    }
+    &.bottom {     
+        justify-content: flex-end;  
+    }
+    &.middle {
+        justify-content: center;
+    }    
+    &.left {       
+        align-items: flex-start; 
+    }
+    &.right {     
+        align-items: flex-end;  
+    }
+    &.center {
+        align-items: center;
+    }    
+}

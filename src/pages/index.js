@@ -60,11 +60,6 @@ export default Pages
 export const pageQuery = graphql`
   query  {
     wordpressPage(slug: { eq: "home"})  {
-      id
-      title
-      content
-      excerpt
-      slug
       acf {
         hero_boolean
         hero {
@@ -95,19 +90,32 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }                
+           
             }
           }
           link {
-            title
-            url
-            target
+            button {
+              title
+              url
+              target              
+            }
+            options
+            corners
+            color
+            bg_color
+            valign
+            halign            
           }
           alt
           title
           caption
         }
-      }    
+      }
+      id
+      title
+      content
+      excerpt
+      slug        
     }
-
   }
 `
