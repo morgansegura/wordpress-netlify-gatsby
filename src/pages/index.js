@@ -21,17 +21,6 @@ class Pages extends Component {
       <Layout>
         <section className="section">
 
-          {!!data.acf.hero_billboard_boolean 
-            && data.acf.hero_billboard_boolean === true ?
-            <Hero heroImage={data.acf.hero_billboard_boolean} node={data.acf.hero_billboard} />
-          : null }
-          
-          {!!data.hero_boolean
-            && data.acf.hero_boolean === true ?
-            data.acf.hero.map(({image}, i ) => (
-              <Hero key={i} heroCarousel={data.acf.hero_boolean} node={image} />
-            ))
-          : null }
 
           <article className="container">
               <header className="py-40 conatiner container--md title__block">
@@ -42,11 +31,8 @@ class Pages extends Component {
                   {data.title}
                 </h2>
               </header>
-
               <div dangerouslySetInnerHTML={{ __html: data.excerpt }} />
-
               <div dangerouslySetInnerHTML={{ __html: data.content }} />
-
           </article>
         </section>
       </Layout>
