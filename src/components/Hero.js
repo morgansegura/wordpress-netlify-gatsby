@@ -23,27 +23,41 @@ class Hero extends Component{
     render() {
         const node = this.props.node
         console.log(this.props)
-        console.log(node.caption.length)
+        console.log(node)
         return (        
             <div className="hero hero__main theme--od">                
                 {!!node && this.props.heroImage === true ?
                 <div className="hero__inner"> 
                     <div className="hero__image-container">
-                        <PreviewCompatibleImage className="hello" imageInfo={node.image.localFile} />              
+                        <PreviewCompatibleImage className="hello" imageInfo={this.props.node.image.localFile} />              
                     </div>
-                    <div className="hero__meta-container top right">
+                    <div className="hero__meta-container bottom right">
                     {!!node.title && node.title !== '' ?
-                        <h4 className="hero__title">{node.title}</h4>
+                        <h4 className="hero__title h1">{node.title}</h4>
                     : null }
                     {!!node.caption && node.caption !== '' ?
                         <p className="hero__caption">{node.caption}</p>
                     : null }
-                    {!!node.link && node.link !== '' ?
-                        <div className="list__block left">
-                            <a className="hero__link btn btn--sm btn__round" href={node.link.url} title={node.link.title}>
-                                {node.link.title}
+                    {!!node.link.button && node.link.button !== '' ?
+                        node.link.options === true ?
+                        <div className={`list__block ${node.link.halign.toLowerCase()} ${node.link.valign.toLowerCase()}`}
+                        >
+                            <a className={`hero__link btn btn--sm ${node.link.corners.toLowerCase()}`}
+                                style={{
+                                    backgroundColor: node.link.bg_color,
+                                    color: node.link.color
+                                }}
+                                href={node.link.button.url} title={node.link.button.title}>
+                                {node.link.button.title}
+                            </a>
+                        </div>                        
+                        : 
+                        <div className="list__block middle right">
+                            <a className="hero__link btn btn--sm btn__white" href={node.link.button.url} title={node.link.button.title}>
+                                {node.link.button.title}
                             </a>
                         </div>
+
                     : null }
                     </div>     
                 </div>                 

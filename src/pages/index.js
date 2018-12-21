@@ -72,11 +72,7 @@ export const pageQuery = graphql`
               }                
             }
           }
-          link {
-            title
-            url
-            target
-          }
+
           alt
           title
           caption
@@ -96,8 +92,9 @@ export const pageQuery = graphql`
           link {
             button {
               title
+              text
               url
-              target              
+              target             
             }
             options
             corners

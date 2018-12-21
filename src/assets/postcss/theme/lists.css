@@ -8,7 +8,7 @@
 .list__block {
     display: flex;
     flex-wrap: wrap;
-    width: auto;
+    width: 100%;
 
     &-column {
         flex-direction: column;
