@@ -1,7 +1,7 @@
 /* Vendors */
 @import 'vendors/normalize';
 @import 'vendors/bootstrap-grid.min.css';
-@import 'vendors/prism-theme.css'; /* Bootstrap4 grid and flexbox classes */
+/* @import 'vendors/prism-theme.css'; */
 @import "vendors/glide.core.min";
 @import "vendors/glide.theme.min";
 
